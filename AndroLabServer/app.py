@@ -120,7 +120,7 @@ if __name__ == '__main__':
         elif arg.startswith("--port="):
             port = int(arg.split('=')[1])
 
-    server = wsgi.Server(("0.0.0.0", port), app, server_name='localhost')
+    server = wsgi.Server(("0.0.0.0", port), app)
     print("The server is hosted on port:", port)
     
     try:
